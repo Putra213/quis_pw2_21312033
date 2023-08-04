@@ -22,13 +22,18 @@
         $numbers = [18, 45, 29, 61, 47, 34];
         echo "array numbers: ";
         print_r($numbers);
-        // Lakukan Looping di sini
+        $rest = array();
+
+        foreach ($numbers as $number) {
+            $rest[] = $number % 5;
+        }
 
         // output nya nanti seperti ini --> [3, 0, 4, 1, 2, 4]
 
         echo "<br>";
         // tampilkan di sini
         echo "Array sisa baginya adalah:  "; 
+        print_r($rest);
         echo "<br>";
 
         echo "<h3> Soal No 3 Looping Asociative Array </h3>";
@@ -46,7 +51,7 @@
 
         */
 
-                /* variabel code jangan diubah */
+
         $items = [
             ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap untuk kantoran', 'logitek.jpeg'], 
             ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.jpeg'],
@@ -54,8 +59,19 @@
             ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
         ];
         
+        //lakukan looping
+        foreach ($items as $item) {
+            $itemData = array(
+                'id' => $item[0],
+                'name' => $item[1],
+                'price' => $item[2],
+                'description' => $item[3],
+                'source' => $item[4]
+            );
         // Output: 
-
+        print_r($itemData);
+        echo "<br>";
+    }
     ?>
 
 </body>
